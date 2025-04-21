@@ -1,6 +1,4 @@
-
 import { IDBService } from '../db/type/dbService';
-
 
 export class CosController {
 
@@ -10,7 +8,7 @@ export class CosController {
         this.dbService = dbService;
     }
 
-    async calcCos():  Promise<number> {
+    async calcCos(): Promise<number> {
         const triangles = await this.dbService.getTriangles();
         const triangle = triangles[0];
         return (triangle.la / triangle.h);
